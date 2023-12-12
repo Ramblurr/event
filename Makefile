@@ -11,9 +11,9 @@ ifndef CLJCMD
 endif
 
 TASK_GROUP_CLJS=-C:dev -R:dev:cljs:test -m prj.task.cljs
-TASK_GROUP_TEST=-C:dev:test -R:dev:test -m prj.task.test
+TASK_GROUP_TEST=-M:dev:test -m prj.task.test
 TASK_GROUP_PACKAGE=-C:dev -R:dev:package -m prj.task.package
-TASK_GROUP_REPL=-C:dev:test -R:dev:repl:test:package:cljs -m prj.task.repl
+TASK_GROUP_REPL=-M:dev:test:dev:repl:test:package:cljs -m prj.task.repl
 
 GROUP_ID=jp.nijohando
 ARTIFACT_ID=event
